@@ -1,0 +1,20 @@
+<!--pages/yangsheng/aidentify/task/taskB/index.wxml-->
+<view class="page">
+
+<!-- 摄像头预览 -->
+<camera class="camera" device-position="front" flash="off" />
+
+<!-- 中间提示背景图片 -->
+<image class="capture-guide" src="/images/tongue.png" mode="widthFix" />
+
+<!-- 拍照按钮 -->
+<view class="camera-btn" bindtap="takePhoto">
+  <text class="btn-text">拍照</text>
+</view>
+
+</view>
+
+
+
+
+

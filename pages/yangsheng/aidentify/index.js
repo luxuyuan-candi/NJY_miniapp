@@ -26,5 +26,10 @@ Page({
     wx.switchTab({
       url: `/pages/index/index`
     })
+  },
+  goNextPage() {
+    wx.navigateTo({
+      url: '/pages/yangsheng/aidentify/task/index'
+    })
   }
 })

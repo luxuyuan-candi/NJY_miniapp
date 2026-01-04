@@ -1,0 +1,46 @@
+<view class="page">
+
+<!-- 标题 -->
+<view class="title">体质测试</view>
+
+<!-- 任务列表 -->
+<view class="task-list">
+
+  <!-- 任务一 -->
+  <view class="task-card" bindtap="goTaskA">
+    <view class="task-text">
+      <view class="task-title">《中医体质分类与判定》</view>
+      <view class="task-desc">回答问题分析体质</view>
+    </view>
+
+    <view class="check" wx:if="{{taskACompleted}}">✔</view>
+  </view>
+
+  <!-- 任务二 -->
+  <view class="task-card" bindtap="goTaskB">
+    <view class="task-text">
+      <view class="task-title">AI舌相</view>
+      <view class="task-desc">拍照能识别舌相</view>
+    </view>
+
+    <view class="check" wx:if="{{taskBCompleted}}">✔</view>
+  </view>
+  <!-- 重新测试按钮 -->
+  <view
+    class="reset-btn"
+    bindtap="resetTest"
+  >
+    重新测试
+  </view>
+
+</view>
+
+<!-- 查看结果按钮 -->
+<view
+  class="result-btn"
+  wx:if="{{allCompleted}}"
+  bindtap="goResult"
+>
+  查看结果
+</view>
+</view>

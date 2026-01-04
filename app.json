@@ -19,7 +19,11 @@
     "pages/yangsheng/yaoshanbao/index",
     "pages/yangsheng/yangshenggongfa/index",
     "pages/yangsheng/yangshengshiping/index",
-    "pages/yangsheng/video/video"
+    "pages/yangsheng/video/video",
+    "pages/yangsheng/aidentify/task/index",
+    "pages/yangsheng/aidentify/task/taskA/index",
+    "pages/yangsheng/aidentify/task/taskB/index",
+    "pages/yangsheng/aidentify/task/result/index"
   ],
   "requiredPrivateInfos": [
     "getLocation",

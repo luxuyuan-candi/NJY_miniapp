@@ -1,0 +1,50 @@
+/* pages/yangsheng/aidentify/task/taskA/index.wxss */
+page {
+  background: #f7f7f7;
+}
+
+.page {
+  padding: 40rpx;
+}
+
+.title {
+  font-size: 40rpx;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40rpx;
+}
+
+/* 问题 */
+.question {
+  background: #ffffff;
+  border-radius: 20rpx;
+  padding: 32rpx;
+  margin-bottom: 32rpx;
+}
+
+.q-title {
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.option {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 12rpx;
+}
+
+/* 提交按钮 */
+.submit-btn {
+  margin-top: 60rpx;
+  height: 96rpx;
+  background: #54a0ff;
+  border-radius: 48rpx;
+
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

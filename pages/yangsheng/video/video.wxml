@@ -3,7 +3,7 @@
   <!-- 视频播放器 -->
   <video
     class="video-player"
-    src="{{video.src}}"
+    src="{{video.videosrc}}"
     controls
     autoplay="{{false}}"
     show-mute-btn

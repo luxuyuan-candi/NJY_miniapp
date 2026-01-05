@@ -11,17 +11,22 @@ Page({
 
   getVideoDetail(id) {
     // 示例数据（后期换成接口）
-    const data = {
-      id,
-      title: '八段锦 · 基础篇',
-      duration: '12分钟',
-      level: '初级',
-      desc: '本功法适合初学者练习，通过缓慢、协调的动作舒展筋骨，调和气血。',
-      src: 'https://www.njwjxy.cn:30443/cat-video/video_4.mp4'
-    }
+    if (!id) return;
 
-    this.setData({
-      video: data
-    })
+    wx.request({
+      url: 'https://www.njwjxy.cn:30443/api/yangsheng/yangshengshiping/video/detail',
+      method: 'GET',
+      data: { id },
+      success: (res) => {
+        if (res.data.code === 0) {
+          this.setData({ video: res.data.data });
+        } else {
+          wx.showToast({ title: res.data.msg, icon: 'none' });
+        }
+      },
+      fail: () => {
+        wx.showToast({ title: '请求失败', icon: 'none' });
+      },
+    });
   }
 })

@@ -1,34 +1,4 @@
 /* pages/yangsheng/index/index.wxss */
-.sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 70%;
-  height: 100%;
-  background: #ffffff;
-  z-index: 1000;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-}
-
-.sidebar.open {
-  transform: translateX(0);
-}
-
-.mask {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 999;
-}
-
-.item {
-  padding: 32rpx;
-  border-bottom: 1px solid #eee;
-}
 
 .page {
   padding: 32rpx;

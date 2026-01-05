@@ -2,20 +2,6 @@
 Page({
   data: {
     showSidebar: false,
-    videoList: [
-      {
-        id: 1,
-        title: '八段锦 · 基础篇',
-        desc: '舒筋活络，适合初学者',
-        cover: '/assets/video1.jpg'
-      },
-      {
-        id: 2,
-        title: '五禽戏 · 呼吸训练',
-        desc: '调理气血，改善体质',
-        cover: '/assets/video2.jpg'
-      }
-    ]
   },
 
   openSidebar() {
@@ -41,10 +27,11 @@ Page({
       url: `/pages/index/index`
     })
   },
-  goVideo(e) {
-    const id = e.currentTarget.dataset.id
+  goList(e) {
+    const { title, type } = e.currentTarget.dataset
+  
     wx.navigateTo({
-      url: `/pages/yangsheng/video/video?id=${id}`
+      url: `/pages/yangsheng/yangshengshiping/videoList/index?title=${title}&type=${type}`
     })
-  }
+  }  
 })

@@ -1,0 +1,163 @@
+/* pages/yangsheng/yaoshanbao/good-detail/index.wxss */
+.page {
+  background: #f5f5f5;
+  height: 100vh;
+  position: relative;
+  padding-top: 88rpx; /* 顶部导航栏留白 */
+}
+
+/* 顶部导航栏 */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 88rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2rpx 5rpx rgba(0,0,0,0.05);
+  z-index: 100;
+}
+
+.back-btn {
+  position: absolute;
+  left: 24rpx;
+  font-size: 36rpx;
+  color: #333;
+}
+
+.nav-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 内容区 */
+.content {
+  padding-bottom: 120rpx; /* 底部操作栏留白 */
+}
+
+/* 商品图片 */
+.goods-img {
+  width: 100%;
+  height: 400rpx;
+  border-bottom-left-radius: 16rpx;
+  border-bottom-right-radius: 16rpx;
+}
+
+/* 商品基本信息 */
+.goods-info {
+  padding: 24rpx;
+  background: #fff;
+  margin-top: 16rpx;
+  border-radius: 16rpx;
+}
+
+.goods-name {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 12rpx;
+}
+
+.goods-brief {
+  font-size: 26rpx;
+  color: #666;
+  margin-bottom: 12rpx;
+}
+
+.price {
+  font-size: 28rpx;
+  color: #e64340;
+  font-weight: bold;
+}
+
+/* 视频容器 */
+.video-box {
+  margin: 16rpx 0;
+  padding: 16rpx;
+  background: #fff;
+  border-radius: 16rpx;
+
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center;     /* 垂直居中 */
+}
+
+/* 视频播放器 */
+.video-player {
+  width: 100%;       /* 撑满容器宽度 */
+  max-width: 650rpx; /* 限制最大宽度 */
+  height: 360rpx;    /* 高度固定或按比例 */
+  border-radius: 12rpx;
+}
+
+/* 详细说明 */
+.description {
+  margin: 16rpx 0;
+  padding: 16rpx;
+  background: #fff;
+  border-radius: 16rpx;
+}
+
+.description .title {
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-bottom: 8rpx;
+}
+
+.description .text {
+  font-size: 24rpx;
+  color: #666;
+  line-height: 36rpx;
+}
+
+/* 底部操作栏 */
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32rpx;
+  box-shadow: 0 -2rpx 5rpx rgba(0,0,0,0.05);
+}
+
+.count {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  width: 48rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  border: 1rpx solid #ddd;
+  border-radius: 8rpx;
+  font-size: 32rpx;
+  margin: 0 4rpx;
+}
+
+.num {
+  width: 60rpx;
+  text-align: center;
+}
+
+/* 购物车按钮 */
+.cart-btn {
+  width: 80rpx;
+  height: 80rpx;
+  position: relative;
+}
+
+.cart-icon {
+  width: 100%;
+  height: 100%;
+}

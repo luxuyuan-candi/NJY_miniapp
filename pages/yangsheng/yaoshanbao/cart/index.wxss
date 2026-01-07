@@ -1,9 +1,7 @@
-/* pages/yangsheng/index/index.wxss */
-/* 页面整体 */
 .page {
   background: #f5f5f5;
   height: 100vh;
-  padding-top: 88rpx; /* 留出导航栏高度 */
+  padding-top: 88rpx; /* 顶部导航栏高度 */
   position: relative;
 }
 
@@ -22,59 +20,26 @@
   z-index: 100;
 }
 
-.menu-btn {
+.back-btn {
   position: absolute;
   left: 24rpx;
-  font-size: 40rpx;
+  font-size: 36rpx;
 }
 
 .nav-title {
-  font-size: 34rpx;
+  font-size: 32rpx;
   font-weight: bold;
-}
-
-/* 遮罩层 */
-.mask {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.4);
-  z-index: 99;
-}
-
-/* 侧边栏 */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 70%;
-  height: 100%;
-  background: #fff;
-  transform: translateX(-100%);
-  transition: transform 0.3s;
-  z-index: 100;
-  padding-top: 88rpx;
-}
-
-.sidebar.open {
-  transform: translateX(0);
-}
-
-.sidebar .item {
-  padding: 32rpx;
-  border-bottom: 1px solid #eee;
-  font-size: 28rpx;
+  color: #333;
 }
 
 /* 商品列表 */
 .content {
   padding: 16rpx;
+  padding-bottom: 120rpx; /* 底部结算栏 */
 }
 
 /* 商品卡片 */
-.goods-item {
+.cart-item {
   display: flex;
   background: #fff;
   border-radius: 16rpx;
@@ -83,12 +48,12 @@
   box-shadow: 0 2rpx 6rpx rgba(0,0,0,0.05);
 }
 
-.goods-img {
-  width: 160rpx;
-  height: 160rpx;
+.cart-img {
+  width: 140rpx;
+  height: 140rpx;
 }
 
-.goods-info {
+.cart-info {
   flex: 1;
   padding: 16rpx;
   display: flex;
@@ -96,22 +61,23 @@
   justify-content: space-between;
 }
 
-.goods-name {
+.cart-name {
   font-size: 30rpx;
   font-weight: bold;
   color: #333;
 }
 
-.goods-brief {
+.cart-brief {
   font-size: 24rpx;
   color: #666;
   margin: 8rpx 0;
 }
 
-.goods-bottom {
+.cart-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .price {
@@ -120,9 +86,16 @@
   color: #e64340;
 }
 
+.subtotal {
+  font-size: 24rpx;
+  color: #666;
+}
+
+/* 加减按钮 */
 .count {
   display: flex;
   align-items: center;
+  margin-top: 8rpx;
 }
 
 .btn {
@@ -130,12 +103,10 @@
   height: 48rpx;
   line-height: 48rpx;
   text-align: center;
-  font-size: 32rpx;
   border: 1rpx solid #ddd;
   border-radius: 8rpx;
-  color: #333;
+  font-size: 32rpx;
   margin: 0 4rpx;
-  user-select: none;
 }
 
 .num {
@@ -143,33 +114,60 @@
   text-align: center;
 }
 
-/* 购物车按钮 */
-.cart-btn {
+/* 底部结算栏 */
+.bottom-bar {
   position: fixed;
-  bottom: 32rpx;
-  right: 32rpx;
-  width: 100rpx;
+  bottom: 0;
+  left: 0;
+  right: 0;
   height: 100rpx;
-  z-index: 101;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16rpx;
+  box-shadow: 0 -2rpx 5rpx rgba(0,0,0,0.05);
 }
 
-.cart-icon {
-  width: 100%;
-  height: 100%;
+/* 左侧操作区域 */
+.left-actions {
+  display: flex;
+  align-items: center;
 }
 
-.cart-count {
-  position: absolute;
-  top: -8rpx;
-  right: -8rpx;
-  background: red;
-  width: 28rpx;
-  height: 28rpx;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 20rpx;
-  text-align: center;
-  line-height: 28rpx;
+/* 清空按钮 */
+.clear-btn {
+  background: #fff;
+  border: 1rpx solid #ddd;
+  color: #333;
+  font-size: 24rpx;
+  padding: 8rpx 16rpx;
+  border-radius: 12rpx;
+  margin-right: 16rpx;
+}
+
+.total {
+  display: flex;
+  align-items: center;
+}
+
+.total-label {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.total-price {
+  font-size: 32rpx;
+  color: #e64340;
   font-weight: bold;
+  margin-left: 8rpx;
+}
+
+.checkout-btn {
+  background: #07c160;
+  color: #fff;
+  font-size: 28rpx;
+  padding: 12rpx 24rpx;
+  border-radius: 16rpx;
 }
 

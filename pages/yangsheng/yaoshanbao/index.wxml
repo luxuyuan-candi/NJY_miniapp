@@ -1,33 +1,55 @@
 <!--pages/yangsheng/index/index.wxml-->
 <!-- 遮罩层 -->
-<view
-  class="mask"
-  wx:if="{{showSidebar}}"
-  bindtap="closeSidebar"
-/>
-
-<!-- 侧边栏 -->
-<view class="sidebar {{showSidebar ? 'open' : ''}}">
-  <view class="item" bindtap="goIndex" >首页</view>
-  <view class="item" bindtap="goPage" data-page="aidentify">体质辨识</view>
-  <view class="item" bindtap="goPage" data-page="yangshengshiping">养生视频</view>
-  <view class="item" bindtap="goPage" data-page="yaoshanbao">药膳包</view>
-</view>
-
 <!-- 主内容 -->
 <view class="page">
+  <!-- 顶部导航栏 -->
   <view class="nav-bar">
-    <!-- 左侧菜单 -->
-    <view class="menu-btn" bindtap="openSidebar">
-      ☰
-    </view>
-
-    <!-- 中间标题 -->
-    <view class="nav-title">
-      药膳包
-    </view>
+    <view class="menu-btn" bindtap="openSidebar">☰</view>
+    <view class="nav-title">药膳包</view>
   </view>
-  <view class="content">
-    药膳包
+
+  <!-- 遮罩层 -->
+  <view class="mask" wx:if="{{showSidebar}}" bindtap="closeSidebar"></view>
+
+  <!-- 侧边栏 -->
+  <view class="sidebar {{showSidebar ? 'open' : ''}}">
+    <view class="item" bindtap="goIndex">首页</view>
+    <view class="item" bindtap="goPage" data-page="aidentify">体质辨识</view>
+    <view class="item" bindtap="goPage" data-page="yangshengshiping">养生视频</view>
+    <view class="item" bindtap="goPage" data-page="yaoshanbao">药膳包</view>
+  </view>
+
+  <!-- 商品列表 -->
+  <scroll-view class="content" scroll-y="true">
+    <view
+      wx:for="{{goodsList}}"
+      wx:key="id"
+      class="goods-item"
+      bindtap="goDetail"
+      data-id="{{item.id}}"
+    >
+      <image class="goods-img" src="{{item.cover}}" />
+
+      <view class="goods-info">
+        <view class="goods-name">{{item.name}}</view>
+        <view class="goods-brief">{{item.brief}}</view>
+        <view class="goods-bottom">
+          <view class="price">￥{{item.price}}</view>
+
+          <view class="count" catchtap>
+            <text bindtap="minus" data-id="{{item.id}}" class="btn">－</text>
+            <text class="num">{{item.count}}</text>
+            <text bindtap="add" data-id="{{item.id}}" class="btn">＋</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- 购物车按钮 -->
+  <view class="cart-btn" bindtap="goCart">
+    <image class="cart-icon" src="../../../images/gouwuche.png" />
+    <view class="cart-count">{{totalCartCount}}</view>
   </view>
 </view>
+

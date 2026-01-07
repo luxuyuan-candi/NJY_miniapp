@@ -1,7 +1,8 @@
 App({
   globalData: {
     openid: null,
-    userInfo: null
+    userInfo: null,
+    cart: {}
   },
   onLaunch() {
     wx.login({
@@ -19,6 +20,8 @@ App({
         }
       }
     })
+    const cart = wx.getStorageSync('cart') || {}
+    this.globalData.cart = cart
   },
 
   onShow() {

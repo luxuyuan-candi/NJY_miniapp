@@ -1,0 +1,55 @@
+<!--pages/yangsheng/yaoshanbao/good-detail/index.wxml-->
+<view class="page">
+
+<!-- 顶部导航栏 -->
+<view class="nav-bar">
+  <view class="back-btn" bindtap="goBack">←</view>
+  <view class="nav-title">商品详情</view>
+</view>
+
+<scroll-view class="content" scroll-y="true">
+  <!-- 商品大图 -->
+  <image class="goods-img" src="{{goods.cover}}" mode="aspectFill" />
+
+  <!-- 商品基本信息 -->
+  <view class="goods-info">
+    <view class="goods-name">{{goods.name}}</view>
+    <view class="goods-brief">{{goods.brief}}</view>
+    <view class="price">￥{{goods.price}}</view>
+  </view>
+
+  <!-- 制作视频 -->
+  <view wx:if="{{goods.video}}" class="video-box">
+    <video
+      class="video-player"
+      src="{{goods.video}}"
+      controls
+      autoplay="{{false}}"
+      loop="{{false}}"
+      muted="{{false}}"
+      objectFit="contain"
+    ></video>
+  </view>
+
+
+  <!-- 商品详细说明 -->
+  <view class="description">
+    <view class="title">商品详情</view>
+    <view class="text">{{goods.description}}</view>
+  </view>
+</scroll-view>
+
+<!-- 底部操作栏 -->
+<view class="bottom-bar">
+  <view class="count">
+    <text bindtap="minus" class="btn">－</text>
+    <text class="num">{{count}}</text>
+    <text bindtap="add" class="btn">＋</text>
+  </view>
+
+  <view class="cart-btn" bindtap="goCart">
+    <image class="cart-icon" src="../../../../images/gouwuche.png" />
+  </view>
+</view>
+
+</view>

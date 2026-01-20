@@ -22,6 +22,13 @@ Page({
     if (this.data.goods.id) this.syncCount()
   },
 
+  onQrLongPress() {
+    wx.previewImage({
+      current: this.data.goods.video,
+      urls: [this.data.goods.video]
+    })
+  },
+
   syncCount() {
     this.setData({
       count: cart.getCount(this.data.goods.id)
@@ -40,6 +47,13 @@ Page({
 
   goCart() {
     wx.navigateTo({ url: '/pages/yangsheng/yaoshanbao/cart/index' })
+  },
+
+  onQrLongPress() {
+    wx.previewImage({
+      current: this.data.goods.video,
+      urls: [this.data.goods.video]
+    })
   },
 
   goBack() {

@@ -95,12 +95,18 @@
   color: #6f5a3a;
 }
 
+.qr-tip {
+  font-size: 22rpx;
+  color: #9a8464;
+}
+
 .qr-img {
   width: 360rpx;
   height: 360rpx;
   border-radius: 16rpx;
   background: #f8f3ea;
 }
+
 
 /* 详细说明 */
 .description {

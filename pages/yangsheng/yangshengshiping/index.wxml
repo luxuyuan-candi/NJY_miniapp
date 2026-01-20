@@ -30,7 +30,7 @@
         hover-class="grid-item-hover"
         hover-stay-time="100"
       >
-        <image src="/images/gongfa.jpg" mode="aspectFill" />
+        <image src="/images/gongfa.png" mode="aspectFill" />
         <view class="grid-text">养生功法</view>
       </view>
 
@@ -42,7 +42,7 @@
         hover-class="grid-item-hover"
         hover-stay-time="100"
       >
-        <image src="/images/diet.jpg" mode="aspectFill" />
+        <image src="/images/diet.png" mode="aspectFill" />
         <view class="grid-text">膳食指导</view>
       </view>
 
@@ -54,7 +54,7 @@
         hover-class="grid-item-hover"
         hover-stay-time="100"
       >
-        <image src="/images/medicine.jpg" mode="aspectFill" />
+        <image src="/images/medicine.png" mode="aspectFill" />
         <view class="grid-text">中药科普</view>
       </view>
 
@@ -66,7 +66,7 @@
         hover-class="grid-item-hover"
         hover-stay-time="100"
       >
-        <image src="/images/culture.jpg" mode="aspectFill" />
+        <image src="/images/culture.png" mode="aspectFill" />
         <view class="grid-text">文化体验</view>
       </view>
     </view>

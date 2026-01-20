@@ -1,17 +1,17 @@
-<!--pages/yangsheng/video/video.wxml-->
+<!-- pages/yangsheng/video/video.wxml -->
 <view class="video-page">
-  <!-- 视频播放器 -->
-  <video
-    class="video-player"
-    src="{{video.videosrc}}"
-    controls
-    autoplay="{{false}}"
-    show-mute-btn
-    show-center-play-btn
-    object-fit="contain"
-  />
+  <view class="video-shell">
+    <video
+      class="video-player"
+      src="{{video.videosrc}}"
+      controls
+      autoplay="{{false}}"
+      show-mute-btn
+      show-center-play-btn
+      object-fit="contain"
+    />
+  </view>
 
-  <!-- 信息区 -->
   <view class="info">
     <view class="title">{{video.title}}</view>
     <view class="meta">
@@ -21,11 +21,4 @@
     </view>
     <view class="desc">{{video.desc}}</view>
   </view>
-
-  <!-- 可选：相关推荐 -->
-  <!--
-  <view class="recommend">
-    <view class="section-title">相关推荐</view>
-  </view>
-  -->
 </view>

@@ -1,2 +1,32 @@
-<!--pages/yangsheng/aidentify/task/result/index.wxml-->
-<text>pages/yangsheng/aidentify/task/result/index.wxml</text>
+<!-- pages/yangsheng/aidentify/task/result/index.wxml -->
+<view class="page">
+  <view class="header">
+    <view class="title">体质检测结果</view>
+    <view class="subtitle">基于问卷作答生成</view>
+  </view>
+
+  <view class="result-card" wx:if="{{result}}">
+    <view class="result-type">{{result.top.type}}</view>
+    <view class="result-score">标准分 {{result.top.standard}}</view>
+    <view class="result-summary">{{description.summary}}</view>
+
+    <view class="traits" wx:if="{{description.traits.length}}">
+      <view class="traits-title">常见特征</view>
+      <view class="traits-list">
+        <view class="trait" wx:for="{{description.traits}}" wx:key="*this">{{item}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="score-card" wx:if="{{result}}">
+    <view class="score-title">各类型标准分</view>
+    <view class="score-list">
+      <view class="score-item" wx:for="{{result.scores}}" wx:key="code">
+        <text class="score-name">{{item.type}}</text>
+        <text class="score-value">{{item.standard}}</text>
+      </view>
+    </view>
+  </view>
+
+  <button class="primary-btn" bindtap="goToYaoShanBao">进入药膳包</button>
+</view>

@@ -4,12 +4,11 @@ page, .page {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background: #000;
+  background: #0d0b09;
   position: relative;
   overflow: hidden;
 }
 
-/* 摄像头充满页面 */
 .camera {
   position: absolute;
   top: 0;
@@ -19,39 +18,57 @@ page, .page {
   z-index: 1;
 }
 
-/* 中间提示图片 */
+.overlay {
+  position: absolute;
+  top: 40rpx;
+  left: 24rpx;
+  right: 24rpx;
+  padding: 18rpx 20rpx;
+  border-radius: 16rpx;
+  background: rgba(20, 14, 8, 0.55);
+  color: #f7e6c7;
+  z-index: 3;
+}
+
+.overlay-title {
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.overlay-subtitle {
+  margin-top: 6rpx;
+  font-size: 24rpx;
+  color: #e7d7ba;
+}
+
 .capture-guide {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 60%;
+  width: 62%;
   z-index: 2;
-  opacity: 0.7; /* 可以调整透明度突出摄像头 */
+  opacity: 0.7;
 }
 
-/* 拍照按钮固定底部 */
 .camera-btn {
   position: absolute;
-  bottom: 60rpx;
+  bottom: 80rpx;
   left: 50%;
   transform: translateX(-50%);
-  width: 150rpx;
-  height: 150rpx;
+  width: 160rpx;
+  height: 160rpx;
   border-radius: 50%;
-  background: red;
+  background: linear-gradient(135deg, #d2872f, #b86c21);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 3;
+  box-shadow: 0 16rpx 30rpx rgba(140, 88, 24, 0.35);
 }
 
 .btn-text {
   color: #fff;
-  font-size: 40rpx;
-  font-weight: bold;
+  font-size: 34rpx;
+  font-weight: 700;
 }
-
-
-
-

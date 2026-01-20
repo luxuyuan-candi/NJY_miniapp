@@ -1,4 +1,4 @@
-<!--pages/yangsheng/yaoshanbao/good-detail/index.wxml-->
+<!-- pages/yangsheng/yaoshanbao/good-detail/index.wxml -->
 <view class="page">
 
 <!-- 顶部导航栏 -->
@@ -18,17 +18,10 @@
     <view class="price">￥{{goods.price}}</view>
   </view>
 
-  <!-- 制作视频 -->
+  <!-- 扫码获取 -->
   <view wx:if="{{goods.video}}" class="video-box">
-    <video
-      class="video-player"
-      src="{{goods.video}}"
-      controls
-      autoplay="{{false}}"
-      loop="{{false}}"
-      muted="{{false}}"
-      objectFit="contain"
-    ></video>
+    <view class="qr-title">扫描二维码获取制作详情</view>
+    <image class="qr-img" src="{{goods.video}}" mode="aspectFit" />
   </view>
 
 
@@ -42,9 +35,9 @@
 <!-- 底部操作栏 -->
 <view class="bottom-bar">
   <view class="count">
-    <text bindtap="minus" class="btn">－</text>
+    <text bindtap="minus" class="btn">-</text>
     <text class="num">{{count}}</text>
-    <text bindtap="add" class="btn">＋</text>
+    <text bindtap="add" class="btn">+</text>
   </view>
 
   <view class="cart-btn" bindtap="goCart">

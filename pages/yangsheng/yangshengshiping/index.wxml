@@ -1,79 +1,74 @@
-<!--pages/yangsheng/index/index.wxml-->
-<!-- 遮罩层 -->
-<view
-  class="mask"
-  wx:if="{{showSidebar}}"
-  bindtap="closeSidebar"
-/>
-
-<!-- 侧边栏 -->
-<view class="sidebar {{showSidebar ? 'open' : ''}}">
-  <view class="item" bindtap="goIndex" >首页</view>
-  <view class="item" bindtap="goPage" data-page="aidentify">体质辨识</view>
-  <view class="item" bindtap="goPage" data-page="yangshengshiping">养生视频</view>
-  <view class="item" bindtap="goPage" data-page="yaoshanbao">药膳包</view>
-</view>
-
-<!-- 主内容 -->
+<!-- pages/yangsheng/yangshengshiping/index.wxml -->
 <view class="page">
   <view class="nav-bar">
-    <!-- 左侧菜单 -->
-    <view class="menu-btn" bindtap="openSidebar">
-      ☰
-    </view>
-    <!-- 中间标题 -->
-    <view class="nav-title">
-      养生视频
-    </view>
+    <view class="menu-btn" bindtap="openSidebar">☰</view>
+    <view class="nav-title">养生视频</view>
   </view>
-  <!-- 四宫格图片入口 -->
-  <view class="grid">
-    <view
-      class="grid-item"
-      bindtap="goList"
-      data-title="养生功法"
-      data-type="gongfa"
-      hover-class="grid-item-hover"
-      hover-stay-time="100"
-    >
-      <image src="/images/gongfa.jpg" mode="aspectFill" />
-      <view class="grid-text">养生功法</view>
+
+  <view class="mask" wx:if="{{showSidebar}}" bindtap="closeSidebar"></view>
+
+  <view class="sidebar {{showSidebar ? 'open' : ''}}">
+    <view class="sidebar-header">养生导航</view>
+    <view class="item" bindtap="goIndex">首页</view>
+    <view class="item" bindtap="goPage" data-page="aidentify">体质辨识</view>
+    <view class="item" bindtap="goPage" data-page="yangshengshiping">养生视频</view>
+    <view class="item" bindtap="goPage" data-page="yaoshanbao">药膳包</view>
+  </view>
+
+  <view class="content">
+    <view class="hero">
+      <view class="hero-title">每日养生课堂</view>
+      <view class="hero-subtitle">功法 · 膳食 · 中药 · 文化</view>
     </view>
 
-    <view
-      class="grid-item"
-      bindtap="goList"
-      data-title="膳食指导"
-      data-type="diet"
-      hover-class="grid-item-hover"
-      hover-stay-time="100"
-    >
-      <image src="/images/diet.jpg" mode="aspectFill" />
-      <view class="grid-text">膳食指导</view>
-    </view>
+    <view class="grid">
+      <view
+        class="grid-item"
+        bindtap="goList"
+        data-title="养生功法"
+        data-type="gongfa"
+        hover-class="grid-item-hover"
+        hover-stay-time="100"
+      >
+        <image src="/images/gongfa.jpg" mode="aspectFill" />
+        <view class="grid-text">养生功法</view>
+      </view>
 
-    <view
-      class="grid-item"
-      bindtap="goList"
-      data-title="中药科普"
-      data-type="medicine"
-      hover-class="grid-item-hover"
-      hover-stay-time="100"
-    >
-      <image src="/images/medicine.jpg" mode="aspectFill" />
-      <view class="grid-text">中药科普</view>
-    </view>
+      <view
+        class="grid-item"
+        bindtap="goList"
+        data-title="膳食指导"
+        data-type="diet"
+        hover-class="grid-item-hover"
+        hover-stay-time="100"
+      >
+        <image src="/images/diet.jpg" mode="aspectFill" />
+        <view class="grid-text">膳食指导</view>
+      </view>
 
-    <view
-      class="grid-item"
-      bindtap="goList"
-      data-title="文化体验"
-      data-type="culture"
-      hover-class="grid-item-hover"
-      hover-stay-time="100"
-    >
-      <image src="/images/culture.jpg" mode="aspectFill" />
-      <view class="grid-text">文化体验</view>
+      <view
+        class="grid-item"
+        bindtap="goList"
+        data-title="中药科普"
+        data-type="medicine"
+        hover-class="grid-item-hover"
+        hover-stay-time="100"
+      >
+        <image src="/images/medicine.jpg" mode="aspectFill" />
+        <view class="grid-text">中药科普</view>
+      </view>
+
+      <view
+        class="grid-item"
+        bindtap="goList"
+        data-title="文化体验"
+        data-type="culture"
+        hover-class="grid-item-hover"
+        hover-stay-time="100"
+      >
+        <image src="/images/culture.jpg" mode="aspectFill" />
+        <view class="grid-text">文化体验</view>
+      </view>
     </view>
   </view>
 </view>

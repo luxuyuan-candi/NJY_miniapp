@@ -1,20 +1,15 @@
-<!--pages/yangsheng/aidentify/task/taskB/index.wxml-->
+<!-- pages/yangsheng/aidentify/task/taskB/index.wxml -->
 <view class="page">
+  <camera class="camera" device-position="front" flash="off" />
 
-<!-- 摄像头预览 -->
-<camera class="camera" device-position="front" flash="off" />
+  <view class="overlay">
+    <view class="overlay-title">AI 舌相</view>
+    <view class="overlay-subtitle">请对准舌头，保持光线充足</view>
+  </view>
 
-<!-- 中间提示背景图片 -->
-<image class="capture-guide" src="/images/tongue.png" mode="widthFix" />
+  <image class="capture-guide" src="/images/tongue.png" mode="widthFix" />
 
-<!-- 拍照按钮 -->
-<view class="camera-btn" bindtap="takePhoto">
-  <text class="btn-text">拍照</text>
+  <view class="camera-btn" bindtap="takePhoto">
+    <text class="btn-text">拍照</text>
+  </view>
 </view>
-
-</view>
-
-
-
-
-

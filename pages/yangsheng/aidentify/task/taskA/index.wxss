@@ -1,50 +1,230 @@
 /* pages/yangsheng/aidentify/task/taskA/index.wxss */
 page {
-  background: #f7f7f7;
+  background: #f6f2ea;
+  color: #2b2a27;
 }
 
 .page {
-  padding: 40rpx;
+  padding: 32rpx 28rpx 60rpx;
+}
+
+.header {
+  padding: 28rpx;
+  border-radius: 24rpx;
+  background: linear-gradient(135deg, #f4e2c3, #f9f3e7);
+  box-shadow: 0 10rpx 30rpx rgba(120, 92, 35, 0.12);
+  margin-bottom: 24rpx;
 }
 
 .title {
   font-size: 40rpx;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 40rpx;
+  font-weight: 700;
+  letter-spacing: 2rpx;
 }
 
-/* 问题 */
-.question {
-  background: #ffffff;
-  border-radius: 20rpx;
-  padding: 32rpx;
-  margin-bottom: 32rpx;
+.subtitle {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  color: #6f634f;
 }
 
-.q-title {
+.progress {
+  margin-top: 16rpx;
+  font-size: 24rpx;
+  color: #9b8b6f;
+}
+
+.result-card {
+  padding: 28rpx;
+  border-radius: 24rpx;
+  background: #fff8ee;
+  border: 2rpx solid #ecd7b4;
+  margin-bottom: 24rpx;
+}
+
+.result-title {
   font-size: 30rpx;
-  margin-bottom: 20rpx;
+  font-weight: 600;
+  color: #8b5e1a;
 }
 
-.option {
+.result-main {
+  margin-top: 12rpx;
+  font-size: 36rpx;
+  font-weight: 700;
+}
+
+.result-score {
+  margin-top: 8rpx;
+  font-size: 26rpx;
+  color: #7a6a55;
+}
+
+.result-list {
+  margin-top: 18rpx;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx 20rpx;
+}
+
+.result-item {
+  width: 48%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+  color: #5c5344;
+}
+
+.status-card {
+  padding: 24rpx;
+  border-radius: 20rpx;
+  background: #ffffff;
+  margin-bottom: 24rpx;
+  box-shadow: 0 6rpx 18rpx rgba(79, 61, 27, 0.08);
+}
+
+.status-title {
   font-size: 28rpx;
-  color: #666;
+  font-weight: 600;
   margin-bottom: 12rpx;
 }
 
-/* 提交按钮 */
-.submit-btn {
-  margin-top: 60rpx;
-  height: 96rpx;
-  background: #54a0ff;
-  border-radius: 48rpx;
+.status-legend {
+  display: flex;
+  gap: 14rpx;
+  margin-bottom: 16rpx;
+}
 
-  color: #fff;
-  font-size: 32rpx;
-  font-weight: 600;
+.legend-item {
+  padding: 6rpx 16rpx;
+  border-radius: 999rpx;
+  font-size: 22rpx;
+}
 
+.legend-item.done {
+  background: #d7f1d1;
+  color: #3b6a2b;
+}
+
+.legend-item.todo {
+  background: #fde2d6;
+  color: #8a3b22;
+}
+
+.legend-item.optional {
+  background: #e7ecf2;
+  color: #4b5a6a;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10rpx;
+}
+
+.status-item {
+  height: 60rpx;
+  border-radius: 12rpx;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 22rpx;
+  border: 1rpx solid transparent;
+}
+
+.status-item.done {
+  background: #d7f1d1;
+  border-color: #bde1b5;
+  color: #3b6a2b;
+}
+
+.status-item.todo {
+  background: #fde2d6;
+  border-color: #f5c6b4;
+  color: #8a3b22;
+}
+
+.status-item.optional {
+  background: #e7ecf2;
+  border-color: #cfd8e3;
+  color: #4b5a6a;
+}
+
+.question-card {
+  background: #ffffff;
+  border-radius: 20rpx;
+  padding: 24rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 6rpx 18rpx rgba(79, 61, 27, 0.08);
+}
+
+.q-index {
+  font-size: 24rpx;
+  color: #a08f74;
+  margin-bottom: 10rpx;
+}
+
+.q-title {
+  font-size: 28rpx;
+  font-weight: 600;
+  margin-bottom: 10rpx;
+  color: #2f2b26;
+}
+
+.q-tip {
+  font-size: 24rpx;
+  color: #8e7b60;
+  margin-bottom: 16rpx;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+}
+
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12rpx;
+  padding: 14rpx 16rpx;
+  border-radius: 16rpx;
+  background: #fbf7ef;
+}
+
+.option-text {
+  font-size: 24rpx;
+  color: #5b5246;
+  line-height: 1.5;
+}
+
+.nav {
+  display: flex;
+  gap: 20rpx;
+  margin-bottom: 28rpx;
+}
+
+.nav-btn {
+  flex: 1;
+  height: 84rpx;
+  border-radius: 42rpx;
+  background: #f0e4cf;
+  color: #6b5838;
+  font-size: 28rpx;
+}
+
+.nav-btn.primary {
+  background: #d09a3c;
+  color: #fff;
+}
+
+.submit-btn {
+  margin-top: 12rpx;
+  height: 92rpx;
+  border-radius: 46rpx;
+  background: #b57b23;
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 600;
+  letter-spacing: 2rpx;
 }

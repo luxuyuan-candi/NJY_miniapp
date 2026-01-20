@@ -1,6 +1,4 @@
-<!--pages/yangsheng/index/index.wxml-->
-<!-- 遮罩层 -->
-<!-- 主内容 -->
+<!-- pages/yangsheng/yaoshanbao/index.wxml -->
 <view class="page">
   <!-- 顶部导航栏 -->
   <view class="nav-bar">
@@ -13,6 +11,7 @@
 
   <!-- 侧边栏 -->
   <view class="sidebar {{showSidebar ? 'open' : ''}}">
+    <view class="sidebar-header">养生导航</view>
     <view class="item" bindtap="goIndex">首页</view>
     <view class="item" bindtap="goPage" data-page="aidentify">体质辨识</view>
     <view class="item" bindtap="goPage" data-page="yangshengshiping">养生视频</view>
@@ -21,25 +20,32 @@
 
   <!-- 商品列表 -->
   <scroll-view class="content" scroll-y="true">
-    <view
-      wx:for="{{goodsList}}"
-      wx:key="id"
-      class="goods-item"
-      bindtap="goDetail"
-      data-id="{{item.id}}"
-    >
-      <image class="goods-img" src="{{item.cover}}" />
+    <view class="hero">
+      <view class="hero-title">今日药膳</view>
+      <view class="hero-subtitle">温补养生 · 轻松上手</view>
+    </view>
 
-      <view class="goods-info">
-        <view class="goods-name">{{item.name}}</view>
-        <view class="goods-brief">{{item.brief}}</view>
-        <view class="goods-bottom">
-          <view class="price">￥{{item.price}}</view>
+    <view class="goods-list">
+      <view
+        wx:for="{{goodsList}}"
+        wx:key="id"
+        class="goods-item"
+        bindtap="goDetail"
+        data-id="{{item.id}}"
+      >
+        <image class="goods-img" src="{{item.cover}}" mode="aspectFill" />
 
-          <view class="count" catchtap>
-            <text bindtap="minus" data-id="{{item.id}}" class="btn">－</text>
-            <text class="num">{{item.count}}</text>
-            <text bindtap="add" data-id="{{item.id}}" class="btn">＋</text>
+        <view class="goods-info">
+          <view class="goods-name">{{item.name}}</view>
+          <view class="goods-brief">{{item.brief}}</view>
+          <view class="goods-bottom">
+            <view class="price">￥{{item.price}}</view>
+
+            <view class="count" catchtap>
+              <text bindtap="minus" data-id="{{item.id}}" class="btn">-</text>
+              <text class="num">{{item.count}}</text>
+              <text bindtap="add" data-id="{{item.id}}" class="btn">+</text>
+            </view>
           </view>
         </view>
       </view>
@@ -52,4 +58,3 @@
     <view class="cart-count">{{totalCartCount}}</view>
   </view>
 </view>
-

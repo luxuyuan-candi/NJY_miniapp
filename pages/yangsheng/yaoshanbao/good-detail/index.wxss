@@ -1,9 +1,9 @@
 /* pages/yangsheng/yaoshanbao/good-detail/index.wxss */
 .page {
-  background: #f5f5f5;
-  height: 100vh;
+  background: #f7f1e6;
+  min-height: 100vh;
   position: relative;
-  padding-top: 88rpx; /* 顶部导航栏留白 */
+  padding-top: 88rpx;
 }
 
 /* 顶部导航栏 */
@@ -13,11 +13,11 @@
   left: 0;
   width: 100%;
   height: 88rpx;
-  background: #fff;
+  background: #fff7eb;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2rpx 5rpx rgba(0,0,0,0.05);
+  box-shadow: 0 6rpx 16rpx rgba(153, 101, 38, 0.12);
   z-index: 100;
 }
 
@@ -25,92 +25,103 @@
   position: absolute;
   left: 24rpx;
   font-size: 36rpx;
-  color: #333;
+  color: #7b4f21;
 }
 
 .nav-title {
   font-size: 32rpx;
-  font-weight: bold;
-  color: #333;
+  font-weight: 700;
+  color: #5c3b16;
 }
 
 /* 内容区 */
 .content {
-  padding-bottom: 120rpx; /* 底部操作栏留白 */
+  padding-bottom: 140rpx;
 }
 
 /* 商品图片 */
 .goods-img {
   width: 100%;
-  height: 400rpx;
-  border-bottom-left-radius: 16rpx;
-  border-bottom-right-radius: 16rpx;
+  height: 420rpx;
+  border-bottom-left-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
 }
 
 /* 商品基本信息 */
 .goods-info {
   padding: 24rpx;
   background: #fff;
-  margin-top: 16rpx;
-  border-radius: 16rpx;
+  margin: 16rpx 20rpx 0;
+  border-radius: 20rpx;
+  box-shadow: 0 8rpx 18rpx rgba(85, 56, 18, 0.12);
+  border: 1rpx solid #f1e3cc;
 }
 
 .goods-name {
   font-size: 32rpx;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 12rpx;
+  font-weight: 700;
+  color: #3f2a11;
+  margin-bottom: 10rpx;
 }
 
 .goods-brief {
-  font-size: 26rpx;
-  color: #666;
+  font-size: 24rpx;
+  color: #7b6a56;
   margin-bottom: 12rpx;
 }
 
 .price {
-  font-size: 28rpx;
-  color: #e64340;
-  font-weight: bold;
+  font-size: 30rpx;
+  color: #c0572a;
+  font-weight: 700;
 }
 
-/* 视频容器 */
+/* 二维码容器 */
 .video-box {
-  margin: 16rpx 0;
-  padding: 16rpx;
+  margin: 16rpx 20rpx 0;
+  padding: 20rpx;
   background: #fff;
-  border-radius: 16rpx;
-
+  border-radius: 20rpx;
   display: flex;
-  justify-content: center; /* 水平居中 */
-  align-items: center;     /* 垂直居中 */
+  flex-direction: column;
+  align-items: center;
+  gap: 14rpx;
+  box-shadow: 0 8rpx 18rpx rgba(85, 56, 18, 0.12);
+  border: 1rpx solid #f1e3cc;
 }
 
-/* 视频播放器 */
-.video-player {
-  width: 100%;       /* 撑满容器宽度 */
-  max-width: 650rpx; /* 限制最大宽度 */
-  height: 360rpx;    /* 高度固定或按比例 */
-  border-radius: 12rpx;
+.qr-title {
+  font-size: 26rpx;
+  color: #6f5a3a;
+}
+
+.qr-img {
+  width: 360rpx;
+  height: 360rpx;
+  border-radius: 16rpx;
+  background: #f8f3ea;
 }
 
 /* 详细说明 */
 .description {
-  margin: 16rpx 0;
-  padding: 16rpx;
+  margin: 16rpx 20rpx 24rpx;
+  padding: 20rpx;
   background: #fff;
-  border-radius: 16rpx;
+  border-radius: 20rpx;
+  box-shadow: 0 8rpx 18rpx rgba(85, 56, 18, 0.12);
+  border: 1rpx solid #f1e3cc;
 }
 
 .description .title {
   font-size: 28rpx;
-  font-weight: bold;
-  margin-bottom: 8rpx;
+  font-weight: 700;
+  margin-bottom: 10rpx;
+  color: #5c3b16;
 }
 
 .description .text {
   font-size: 24rpx;
-  color: #666;
+  color: #6f5a3a;
   line-height: 36rpx;
 }
 
@@ -120,44 +131,56 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100rpx;
+  height: 120rpx;
   background: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 32rpx;
-  box-shadow: 0 -2rpx 5rpx rgba(0,0,0,0.05);
+  padding: 0 24rpx;
+  box-shadow: 0 -8rpx 20rpx rgba(120, 78, 24, 0.12);
+  border-top-left-radius: 24rpx;
+  border-top-right-radius: 24rpx;
 }
 
 .count {
   display: flex;
   align-items: center;
+  background: #f7eddc;
+  border-radius: 999rpx;
+  padding: 6rpx 10rpx;
 }
 
 .btn {
-  width: 48rpx;
-  height: 48rpx;
-  line-height: 48rpx;
+  width: 44rpx;
+  height: 44rpx;
+  line-height: 44rpx;
   text-align: center;
-  border: 1rpx solid #ddd;
-  border-radius: 8rpx;
-  font-size: 32rpx;
-  margin: 0 4rpx;
+  border-radius: 50%;
+  font-size: 30rpx;
+  color: #6b4a1f;
+  background: #fff;
+  margin: 0 6rpx;
 }
 
 .num {
-  width: 60rpx;
+  width: 56rpx;
   text-align: center;
+  color: #5f4525;
+  font-weight: 600;
 }
 
-/* 购物车按钮 */
 .cart-btn {
-  width: 80rpx;
-  height: 80rpx;
-  position: relative;
+  width: 84rpx;
+  height: 84rpx;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d2872f, #b86c21);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12rpx 22rpx rgba(140, 88, 24, 0.25);
 }
 
 .cart-icon {
-  width: 100%;
-  height: 100%;
+  width: 44rpx;
+  height: 44rpx;
 }

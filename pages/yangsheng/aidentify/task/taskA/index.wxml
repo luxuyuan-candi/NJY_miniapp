@@ -1,26 +1,67 @@
-<!--pages/yangsheng/aidentify/task/taskA/index.wxml-->
+<!-- pages/yangsheng/aidentify/task/taskA/index.wxml -->
 <view class="page">
-
-<view class="title">中医体质分类与判定</view>
-
-<view class="content">
-
-  <view class="question">
-    <view class="q-title">1. 您是否容易疲劳？</view>
-    <view class="option">○ 是</view>
-    <view class="option">○ 否</view>
+  <view class="header">
+    <view class="title">中医体质分类与判定</view>
+    <view class="subtitle">请根据近一年的总体感受作答</view>
+    <view class="progress">
+      必答已答 {{answeredRequiredCount}} / {{requiredCount}} · 总已答 {{answeredTotalCount}} / {{totalCount}}
+    </view>
   </view>
 
-  <view class="question">
-    <view class="q-title">2. 您平时怕冷吗？</view>
-    <view class="option">○ 是</view>
-    <view class="option">○ 否</view>
+  <view class="result-card" wx:if="{{result}}">
+    <view class="result-title">体质判定结果</view>
+    <view class="result-main">{{result.top.type}}</view>
+    <view class="result-score">标准分 {{result.top.standard}}</view>
+    <view class="result-list">
+      <view class="result-item" wx:for="{{result.scores}}" wx:key="code">
+        <text class="result-name">{{item.type}}</text>
+        <text class="result-value">{{item.standard}}</text>
+      </view>
+    </view>
   </view>
 
-</view>
+  <view class="status-card">
+    <view class="status-title">答题情况</view>
+    <view class="status-legend">
+      <view class="legend-item done">已答</view>
+      <view class="legend-item todo">未答</view>
+      <view class="legend-item optional">可不答</view>
+    </view>
+    <view class="status-grid">
+      <view
+        class="status-item {{answers[item.id] != null ? 'done' : (item.optional ? 'optional' : 'todo')}}"
+        wx:for="{{questions}}"
+        wx:key="id"
+        data-index="{{index}}"
+        bindtap="jumpToQuestion"
+      >
+        {{index + 1}}
+      </view>
+    </view>
+  </view>
 
-<view class="submit-btn" bindtap="submitTask">
-  提交问卷
-</view>
+  <view class="question-card" wx:if="{{currentQuestion}}">
+    <view class="q-index">第 {{currentIndex + 1}} / {{totalCount}} 题</view>
+    <view class="q-title">{{currentQuestion.displayText}}</view>
+    <view class="q-tip" wx:if="{{currentQuestion.optional}}">本题为性别相关，可不答</view>
+    <radio-group class="options" data-qid="{{currentQuestion.id}}" bindchange="onAnswerChange">
+      <label class="option" wx:for="{{currentQuestion.displayOptions}}" wx:key="value">
+        <radio value="{{item.value}}" checked="{{answers[currentQuestion.id] == item.value}}" />
+        <text class="option-text">{{item.text}}</text>
+      </label>
+    </radio-group>
+  </view>
 
+  <view class="nav">
+    <button class="nav-btn" bindtap="prevQuestion" disabled="{{currentIndex === 0}}">上一题</button>
+    <button
+      class="nav-btn primary"
+      bindtap="nextQuestion"
+      disabled="{{currentIndex === totalCount - 1}}"
+    >
+      下一题
+    </button>
+  </view>
+
+  <button class="submit-btn" bindtap="submitTask">提交问卷</button>
 </view>

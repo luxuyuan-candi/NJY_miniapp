@@ -1,50 +1,42 @@
-<!--pages/yangsheng/yaoshanbao/cart/index.wxml-->
+<!-- pages/yangsheng/yaoshanbao/cart/index.wxml -->
 <view class="page">
+  <!-- 顶部导航栏 -->
+  <view class="nav-bar">
+    <view class="back-btn" bindtap="goBack">←</view>
+    <view class="nav-title">购物车</view>
+  </view>
 
-<!-- 顶部导航栏 -->
-<view class="nav-bar">
-  <view class="back-btn" bindtap="goBack">←</view>
-  <view class="nav-title">购物车</view>
-</view>
+  <!-- 商品列表 -->
+  <scroll-view class="content" scroll-y="true">
+    <view class="cart-card" wx:for="{{cartList}}" wx:key="id">
+      <image class="cart-img" src="{{item.cover}}" mode="aspectFill" />
 
-<!-- 商品列表 -->
-<scroll-view class="content" scroll-y="true">
-  <view
-    wx:for="{{cartList}}"
-    wx:key="id"
-    class="cart-item"
-  >
-    <!-- 商品图片 -->
-    <image class="cart-img" src="{{item.cover}}" />
+      <view class="cart-info">
+        <view class="cart-name">{{item.name}}</view>
+        <view class="cart-brief">{{item.brief}}</view>
+        <view class="cart-bottom">
+          <view class="price">￥{{item.price}}</view>
+          <view class="subtotal">小计：￥{{item.subtotal}}</view>
 
-    <!-- 商品信息 -->
-    <view class="cart-info">
-      <view class="cart-name">{{item.name}}</view>
-      <view class="cart-brief">{{item.brief}}</view>
-      <view class="cart-bottom">
-        <view class="price">￥{{item.price}}</view>
-        <view class="subtotal">小计：￥{{item.subtotal}}</view>
-
-        <view class="count" catchtap>
-          <text bindtap="minus" data-id="{{item.id}}" class="btn">－</text>
-          <text class="num">{{item.count}}</text>
-          <text bindtap="add" data-id="{{item.id}}" class="btn">＋</text>
+          <view class="count" catchtap>
+            <text bindtap="minus" data-id="{{item.id}}" class="btn">-</text>
+            <text class="num">{{item.count}}</text>
+            <text bindtap="add" data-id="{{item.id}}" class="btn">+</text>
+          </view>
         </view>
       </view>
     </view>
-  </view>
-</scroll-view>
+  </scroll-view>
 
   <!-- 底部结算栏 -->
   <view class="bottom-bar">
     <view class="left-actions">
       <button class="clear-btn" bindtap="clearCart">清空购物车</button>
       <view class="total">
-        <view class="total-label">合计：</view>
+        <view class="total-label">合计</view>
         <view class="total-price">￥{{totalPrice}}</view>
       </view>
     </view>
     <view class="checkout-btn" bindtap="checkout">去结算</view>
   </view>
-
 </view>

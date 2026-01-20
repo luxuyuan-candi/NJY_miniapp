@@ -88,6 +88,7 @@
   gap: 14rpx;
   box-shadow: 0 8rpx 18rpx rgba(85, 56, 18, 0.12);
   border: 1rpx solid #f1e3cc;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
 }
 
 .qr-title {
@@ -105,6 +106,27 @@
   height: 360rpx;
   border-radius: 16rpx;
   background: #f8f3ea;
+  transition: transform 0.12s ease, filter 0.12s ease;
+  box-shadow: 0 12rpx 24rpx rgba(140, 88, 24, 0.18);
+}
+
+.qr-press {
+  transform: scale(0.985);
+  box-shadow: 0 4rpx 10rpx rgba(140, 88, 24, 0.25);
+  background: #fff6e8;
+}
+
+.qr-press .qr-img {
+  transform: scale(0.95);
+  filter: brightness(0.97);
+}
+
+.qr-canvas {
+  position: absolute;
+  left: -9999rpx;
+  top: -9999rpx;
+  width: 10rpx;
+  height: 10rpx;
 }
 
 

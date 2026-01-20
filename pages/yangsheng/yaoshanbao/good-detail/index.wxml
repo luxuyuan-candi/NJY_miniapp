@@ -18,8 +18,13 @@
     </view>
 
     <!-- 扫码获取 -->
-    <view wx:if="{{goods.video}}" class="video-box">
-      <view class="qr-title">扫描二维码获取药膳包</view>
+    <view
+      wx:if="{{goods.video}}"
+      class="video-box"
+      hover-class="qr-press"
+      hover-stay-time="200"
+    >
+      <view class="qr-title">扫描二维码获取详情</view>
       <view class="qr-tip">长按二维码识别</view>
       <image
         class="qr-img"
@@ -29,6 +34,7 @@
       />
     </view>
 
+    <canvas type="2d" id="qrCanvas" class="qr-canvas"></canvas>
 
     <!-- 商品详细说明 -->
     <view class="description">

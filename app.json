@@ -25,7 +25,8 @@
     "pages/yangsheng/aidentify/task/taskB/index",
     "pages/yangsheng/aidentify/task/result/index",
     "pages/yangsheng/yaoshanbao/good-detail/index",
-    "pages/yangsheng/yaoshanbao/cart/index"
+    "pages/yangsheng/yaoshanbao/cart/index",
+    "pages/webview/index"
   ],
   "requiredPrivateInfos": [
     "getLocation",

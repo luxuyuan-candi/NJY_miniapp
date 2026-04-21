@@ -61,5 +61,10 @@ Page({
     wx.navigateTo({
       url: '/pages/yangsheng/aidentify/index'
     })
+  },
+  goToQingGan() {
+    wx.navigateTo({
+      url: '/pages/qinggan/index'
+    })
   }
 })

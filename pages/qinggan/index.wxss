@@ -1,0 +1,51 @@
+.container {
+  min-height: 100vh;
+  padding: 32rpx;
+  background: linear-gradient(180deg, #f6fbf8 0%, #ffffff 100%);
+  box-sizing: border-box;
+}
+
+.hero {
+  padding: 36rpx 32rpx;
+  border-radius: 24rpx;
+  background: linear-gradient(135deg, #dff4e8 0%, #eefaf3 100%);
+  box-shadow: 0 12rpx 30rpx rgba(58, 120, 87, 0.08);
+}
+
+.title {
+  display: block;
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #1f4d38;
+}
+
+.description {
+  display: block;
+  margin-top: 12rpx;
+  font-size: 26rpx;
+  line-height: 1.7;
+  color: #4c6b5b;
+}
+
+.card {
+  margin-top: 24rpx;
+  padding: 32rpx;
+  border-radius: 24rpx;
+  background-color: #ffffff;
+  box-shadow: 0 12rpx 30rpx rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+  display: block;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #21352b;
+}
+
+.card-text {
+  display: block;
+  margin-top: 14rpx;
+  font-size: 26rpx;
+  line-height: 1.8;
+  color: #5f6f66;
+}

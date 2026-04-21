@@ -40,5 +40,9 @@
       <image src="../../images/yangsheng.png" class="tool-icon" />
       <text>养生平台</text>
     </view>
+    <view class="tool-btn" bindtap="goToQingGan" hover-class="tool-btn-active">
+      <image src="../../images/chat.png" class="tool-icon" />
+      <text>情感分析</text>
+    </view>
   </view>
 </view>
